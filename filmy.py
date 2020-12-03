@@ -1,10 +1,7 @@
-
 '''
 Moduł 7
 Zadanie: Biblioteka filmów
 '''
-
-
 
 class Film:
     def __init__(self, tytul, rok, gatunek, liczba_odtworzenen):
@@ -29,9 +26,38 @@ class Serial(Film):
     def __str__(self):
         return f'{self.tytul} S{self.nr_sezonu}E{self.nr_odcinka}'
 
+film_pierwszy = Film("Pulp Fiction", 1994, "Gangsterski", 0)
+film_drugi = Film("Ojciec Chrzestny", 1972, "Gangsterski", 0)
+film_trzeci = Film("Forrest Gump", 1994, "Komediowy", 0)
+film_czwarty = Film("Incepcja", 2010, "Sci-Fi", 0)
+film_piaty = Film("Gladiator", 2000, "Historyczny", 0)
 
+serial_pierwszy = Serial(1, 1, "Sherlok", 2010, "Kryminalny", 0)
+serial_drugi = Serial(1, 1, "Przyjaciele", 1994, "Komediowy", 0)
+serial_trzeci = Serial(1, 1, "House of Cards", 2013, "Polityczny", 0)
 
+'''
+print(film_pierwszy)
+print(f'{film_pierwszy.tytul} ')
+print(f'tytuł {serial_pierwszy.tytul}, S{serial_pierwszy.nr_sezonu}, E{serial_pierwszy.nr_odcinka}')
+print(serial_drugi)
+print(serial_trzeci)
+'''
+Biblioteka_filmow = []
 
+def dodaj_film(film_lub_serial):
+    Biblioteka_filmow.append(film_lub_serial)
+
+dodaj_film(film_pierwszy)
+dodaj_film(film_drugi)
+dodaj_film(film_trzeci)
+dodaj_film(film_czwarty)
+dodaj_film(film_piaty)
+dodaj_film(serial_pierwszy)
+dodaj_film(serial_drugi)
+dodaj_film(serial_trzeci)
+
+print(Biblioteka_filmow[0])
 
 print()
 '''
