@@ -3,6 +3,8 @@ Moduł 7
 Zadanie: Biblioteka filmów
 '''
 
+import random
+
 class Film:
     def __init__(self, tytul, rok, gatunek, liczba_odtworzenen):
         self.tytul = tytul
@@ -43,10 +45,10 @@ print(f'tytuł {serial_pierwszy.tytul}, S{serial_pierwszy.nr_sezonu}, E{serial_p
 print(serial_drugi)
 print(serial_trzeci)
 '''
-Biblioteka_filmow = []
+biblioteka_filmow = []
 
 def dodaj_film(film_lub_serial):
-    Biblioteka_filmow.append(film_lub_serial)
+    biblioteka_filmow.append(film_lub_serial)
 
 dodaj_film(film_pierwszy)
 dodaj_film(film_drugi)
@@ -57,7 +59,67 @@ dodaj_film(serial_pierwszy)
 dodaj_film(serial_drugi)
 dodaj_film(serial_trzeci)
 
-print(Biblioteka_filmow[0])
+#print(biblioteka_filmow)
+#print(len(biblioteka_filmow))
+
+
+def tworz_lista_seriali():
+    lista_seriali = []
+    for i in range(len(biblioteka_filmow)):
+        n = isinstance(biblioteka_filmow(i), Serial)
+        if n:
+            lista_seriali.append(biblioteka_filmow(i))
+        else:
+            pass
+    return print(lista_seriali)
+
+
+def tworz_lista_filmow():
+    lista_filmow = []
+    for i in range(len(biblioteka_filmow)):
+        n = isinstance(biblioteka_filmow(i), Serial)
+        if n:
+            pass
+        else:
+            lista_filmow.append(biblioteka_filmow(i))
+    return print(lista_filmow)
+
+
+tworz_lista_filmow
+tworz_lista_seriali
+
+'''
+print(lista_filmow)
+print(lista_seriali)
+
+for i in range(len(lista_filmow)):
+    print(f'film nr {i} - {lista_filmow(i)}')
+'''
+
+def szukaj(film_do_wyszukania):
+    for film in biblioteka_filmow:
+        if film == film_do_wyszukania:
+            print(film)
+        else:
+            print("Nie znalazłem takiego filmu")
+
+
+def tworz_ilosc_odtworzen():
+    n = random.choice(biblioteka_filmow)
+    i =  random.randrange(99) + 1
+    for k in range(i):
+        biblioteka_filmow(n).play
+
+
+def wielokrotnie_tworz_ilosc_odtworzen(ilosc):
+    for n in range(ilosc):
+        tworz_ilosc_odtworzen()
+
+def ogladalnosc():
+    z_najwiaksza_ogladalnoscia = sorted(biblioteka_filmow, key=lambda Film: Film.liczba_odtworzen)
+    return z_najwiaksza_ogladalnoscia
+
+
 
 print()
 '''
